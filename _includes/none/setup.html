@@ -19,12 +19,10 @@ install.packages(c("tidyverse", "ggbeeswarm", "qtl2", "qtl2convert"))
 Once the installation is complete, load the libraries to make sure that they installed correctly.  
 </p>
 
-<code>
-library(tidyverse)  
-library(ggbeeswarm)  
-library(qtl2)  
-library(qtl2convert)  
-</code>
+<code>library(tidyverse)</code>
+<code>library(ggbeeswarm)</code>
+<code>library(qtl2)</code>
+<code>library(qtl2convert)</code>
 
 <p>
 If the libraries don't load and you received errors during the installation, please contact the workshop instructors before the workshop to help you.  
@@ -45,20 +43,20 @@ If the libraries don't load and you received errors during the installation, ple
 <li>Use the <code>Files</code> tab to create  a <code>data</code> folder to hold the data, a <code>scripts</code> folder to house your scripts, and a <code>results</code> folder to hold results.</li> 
 Alternatively, you can use the  R console to run the following commands for step 2 only. You still need to create a  project with step 1.  
 
-<code>
-dir.create("./data")  
-dir.create("./scripts")  
-dir.create("./results")  
-</code>
+<code>dir.create("./data")</code>
+<code>dir.create("./scripts")</code>
+<code>dir.create("./results")</code>
 
 </ol>
 
 <h3>Data Sets</h3>
 
-For this course, we will have several data files which you will need to download to the `data` directory in the project folder on your Desktop.
+<p>
+For this course, we will have several data files which you will need to download to the <code>data</code>code> directory in the project folder on your Desktop.
 Copy, paste, and run the following code in the RStudio console.  
-
-The first file contains the data that we will use for QTL mapping in an F2 population.  
+</p>
+    
+<p>The first file contains the data that we will use for QTL mapping in an F2 population.</p> 
 
 <code>
 download.file(url      = "https://thejacksonlaboratory.box.com/shared/static/svw7ivp5hhmd7vb8fy26tc53h7r85wez.zip",
@@ -66,7 +64,7 @@ download.file(url      = "https://thejacksonlaboratory.box.com/shared/static/svw
               mode     = "wb")
 </code>
 
-The second file contains the Diversity Outbred mapping data.  
+<p>The second file contains the Diversity Outbred mapping data.</p> 
 
 <code>
 download.file(url      = "https://thejacksonlaboratory.box.com/shared/static/wspizp2jgrtngvvw5ixredpu7627mh5w.rdata",
@@ -74,7 +72,7 @@ download.file(url      = "https://thejacksonlaboratory.box.com/shared/static/wsp
               mode     = "wb")
 </code>
 
-Next, download the MUGA marker positions from Karl Broman's Github page.  
+<p>Next, download the MUGA marker positions from Karl Broman's Github page.</p> 
 
 <code>
 download.file(url      = "https://raw.githubusercontent.com/kbroman/MUGAarrays/main/UWisc/muga_uwisc_v4.csv",
@@ -82,7 +80,7 @@ download.file(url      = "https://raw.githubusercontent.com/kbroman/MUGAarrays/m
               mode     = "wb")
 </code>
 
-Next, we need a database of the DO founder SNPs and gene positions. This file is 10 GB, so it will take a while to download.  
+<p>Next, we need a database of the DO founder SNPs and gene positions. This file is 10 GB, so it will take a while to download.</p> 
 
 <code>
 download.file(url      = "https://figshare.com/ndownloader/files/40157572",
@@ -90,17 +88,21 @@ download.file(url      = "https://figshare.com/ndownloader/files/40157572",
               mode     = "wb")
 </code>
 
-3. Please download the following large files **before the workshop**, and place them in your `data` folder. You can download the files from the URLs below and move the files the same way that you would for downloading and moving any other kind of data.  
+<p>
+Please download the following large files **before the workshop**, and place them in your <code>data</code> folder. You can download the files from the URLs below and move the files the same way that you would for downloading and moving any other kind of data.
+</p>  
 
-- [cc_variants.sqlite doi:10.6084/m9.figshare.5280229.v2](https://figshare.com/articles/SQLite_database_of_variants_in_Collaborative_Cross_founder_mouse_strains/5280229/2), variants in the Collaborative Cross founders (3 GB)  
-- [mouse_genes.sqlite doi:10.6084/m9.figshare.5280238.v4](https://figshare.com/articles/SQLite_database_with_mouse_gene_annotations_from_Mouse_Genome_Informatics_MGI_at_The_Jackson_Laboratory/5280238/4) full set of mouse gene annotations (677 MB)  
-- [mouse_genes_mgi.sqlite doi:10.6084/m9.figshare.5286019.v5](https://figshare.com/articles/SQLite_database_with_MGI_mouse_gene_annotations_from_Mouse_Genome_Informatics_MGI_at_The_Jackson_Laboratory/5286019/5) just the MGI mouse gene annotations (11 MB)  
+<ul>
+<li>[cc_variants.sqlite doi:10.6084/m9.figshare.5280229.v2](https://figshare.com/articles/SQLite_database_of_variants_in_Collaborative_Cross_founder_mouse_strains/5280229/2), variants in the Collaborative Cross founders (3 GB)</li>
+<li>[mouse_genes.sqlite doi:10.6084/m9.figshare.5280238.v4](https://figshare.com/articles/SQLite_database_with_mouse_gene_annotations_from_Mouse_Genome_Informatics_MGI_at_The_Jackson_Laboratory/5280238/4) full set of mouse gene annotations (677 MB)</li>
+<li>[mouse_genes_mgi.sqlite doi:10.6084/m9.figshare.5286019.v5](https://figshare.com/articles/SQLite_database_with_MGI_mouse_gene_annotations_from_Mouse_Genome_Informatics_MGI_at_The_Jackson_Laboratory/5286019/5) just the MGI mouse gene annotations (11 MB)</li>
+</ul>
+    
+<p>
+Alternatively, you can copy and paste the following into the R console to download the data.
+</p> 
 
-Alternatively, you can copy and paste the following into the R console to download the data.  
-
-<code>
-setwd("~/Desktop/mapping")
-download.file("https://ndownloader.figshare.com/files/9746485", "./data/cc_variants.sqlite")
-download.file("https://ndownloader.figshare.com/files/9746458", "./data/mouse_genes.sqlite")
-download.file("https://ndownloader.figshare.com/files/9746452", "./data/mouse_genes_mgi.sqlite")
-</code>
+<code>setwd("~/Desktop/mapping")</code>
+<code>download.file("https://ndownloader.figshare.com/files/9746485", "./data/cc_variants.sqlite")</code>
+<code>download.file("https://ndownloader.figshare.com/files/9746458", "./data/mouse_genes.sqlite")</code>
+<code>download.file("https://ndownloader.figshare.com/files/9746452", "./data/mouse_genes_mgi.sqlite")</code>
