@@ -395,6 +395,6 @@ These are the installation instructions for the tools used
 during the workshop.
 {% endcomment %}
 
-{% include none/setup.html %}
+{% include none/setup.md %}
 
 
