@@ -1,7 +1,3 @@
----
-title: Setup
----
-
 ## Software Setup
 
 R is a programming language that is especially powerful for data exploration, 
