@@ -15,34 +15,40 @@ After installing R and RStudio, start RStudio.
 install.packages(c("tidyverse", "ggbeeswarm", "qtl2", "qtl2convert"))
 </code>
 
+<p>
 Once the installation is complete, load the libraries to make sure that they installed correctly.  
+</p>
 
 <code>
-library(tidyverse)
-library(ggbeeswarm)
-library(qtl2)
-library(qtl2convert)
+library(tidyverse)  
+library(ggbeeswarm)  
+library(qtl2)  
+library(qtl2convert)  
 </code>
 
+<p>
 If the libraries don't load and you received errors during the installation, please contact the workshop instructors before the workshop to help you.  
+</p>
 
 <h3>Project organization</h3>
 
 <ol>
-<li>Create a new project in your Desktop called `qtl_mapping`.</li>  
-- Click the `File` menu button, then `New Project`.  
-- Click `New Directory`.  
-- Click `New Project`.  
-- Type `qtl_mapping` as the directory name. Browse to your Desktop to create the project there.  
-- Click the `Create Project` button.  
+<li>Create a new project in your Desktop called <code>qtl_mapping</code>.</li>
+    <ul>
+        <li>Click the <code>File</code> menu button, then <code>New Project</code>.</li>
+        <li>Click <code>New Directory</code>.</li>
+        <li>Click <code>New Project</code>.</li>
+        <li>Type <code>qtl_mapping</code> as the directory name. Browse to your Desktop to create the project there.</li>
+        <li>Click the <code>Create Project</code> button.</li>
+    </ul>
 
-<li>Use the `Files` tab to create  a `data` folder to hold the data, a `scripts` folder to house your scripts, and a `results` folder to hold results.</li> 
+<li>Use the <code>Files</code> tab to create  a <code>data</code> folder to hold the data, a <code>scripts</code> folder to house your scripts, and a <code>results</code> folder to hold results.</li> 
 Alternatively, you can use the  R console to run the following commands for step 2 only. You still need to create a  project with step 1.  
 
 <code>
-dir.create("./data")
-dir.create("./scripts")
-dir.create("./results")
+dir.create("./data")  
+dir.create("./scripts")  
+dir.create("./results")  
 </code>
 
 </ol>
