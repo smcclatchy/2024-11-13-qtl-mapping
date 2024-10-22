@@ -378,6 +378,6 @@ These are the installation instructions for the tools used
 during the workshop.
 {% endcomment %}
 
-{% include none/setup.md %}
+{% include none/setup.html %}
 
 
