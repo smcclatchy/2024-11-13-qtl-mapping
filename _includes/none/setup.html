@@ -16,6 +16,8 @@ install.packages(c("tidyverse", "ggbeeswarm", "qtl2", "qtl2convert"))
 </code>
 
 <p>
+</p>
+<p>
 Once the installation is complete, load the libraries to make sure that they installed correctly.  
 </p>
 
@@ -53,7 +55,7 @@ If the libraries don't load and you received errors during the installation, ple
 <h3>Data Sets</h3>
 
 <p>
-For this course, we will have several data files which you will need to download to the <code>data</code>code> directory in the project folder on your Desktop.
+For this course, we will have several data files which you will need to download to the <code>data</code> directory in the project folder on your Desktop.
 Copy, paste, and run the following code in the RStudio console.  
 </p>
     
@@ -65,6 +67,8 @@ download.file(url      = "https://thejacksonlaboratory.box.com/shared/static/svw
               mode     = "wb")
 </code>
 
+<p>
+</p>
 <p>The second file contains the Diversity Outbred mapping data.</p> 
 
 <code>
@@ -73,6 +77,8 @@ download.file(url      = "https://thejacksonlaboratory.box.com/shared/static/wsp
               mode     = "wb")
 </code>
 
+<p>
+</p>
 <p>Next, download the MUGA marker positions from Karl Broman's Github page.</p> 
 
 <code>
@@ -81,6 +87,8 @@ download.file(url      = "https://raw.githubusercontent.com/kbroman/MUGAarrays/m
               mode     = "wb")
 </code>
 
+<p>
+</p>
 <p>Next, we need a database of the DO founder SNPs and gene positions. This file is 10 GB, so it will take a while to download.</p> 
 
 <code>
@@ -90,11 +98,13 @@ download.file(url      = "https://figshare.com/ndownloader/files/40157572",
 </code>
 
 <p>
-Please download the following large files **before the workshop**, and place them in your <code>data</code> folder. You can download the files from the URLs below and move the files the same way that you would for downloading and moving any other kind of data.
+</p>
+<p>
+Please download the following large files <strong>before the workshop</strong>, and place them in your <code>data</code> folder. You can download the files from the URLs below and move the files the same way that you would for downloading and moving any other kind of data.
 </p>  
 
 <ul>
-<li>[cc_variants.sqlite doi:10.6084/m9.figshare.5280229.v2](https://figshare.com/articles/SQLite_database_of_variants_in_Collaborative_Cross_founder_mouse_strains/5280229/2), variants in the Collaborative Cross founders (3 GB)</li>
+<li> [cc_variants.sqlite doi:10.6084/m9.figshare.5280229.v2](https://figshare.com/articles/SQLite_database_of_variants_in_Collaborative_Cross_founder_mouse_strains/5280229/2), variants in the Collaborative Cross founders (3 GB)</li>
 <li>[mouse_genes.sqlite doi:10.6084/m9.figshare.5280238.v4](https://figshare.com/articles/SQLite_database_with_mouse_gene_annotations_from_Mouse_Genome_Informatics_MGI_at_The_Jackson_Laboratory/5280238/4) full set of mouse gene annotations (677 MB)</li>
 <li>[mouse_genes_mgi.sqlite doi:10.6084/m9.figshare.5286019.v5](https://figshare.com/articles/SQLite_database_with_MGI_mouse_gene_annotations_from_Mouse_Genome_Informatics_MGI_at_The_Jackson_Laboratory/5286019/5) just the MGI mouse gene annotations (11 MB)</li>
 </ul>
@@ -103,7 +113,7 @@ Please download the following large files **before the workshop**, and place the
 Alternatively, you can copy and paste the following into the R console to download the data.
 </p> 
 
-<code>setwd("~/Desktop/mapping")</code>
-<code>download.file("https://ndownloader.figshare.com/files/9746485", "./data/cc_variants.sqlite")</code>
-<code>download.file("https://ndownloader.figshare.com/files/9746458", "./data/mouse_genes.sqlite")</code>
-<code>download.file("https://ndownloader.figshare.com/files/9746452", "./data/mouse_genes_mgi.sqlite")</code>
+<p><code>setwd("~/Desktop/mapping")</code></p>
+<p><code>download.file("https://ndownloader.figshare.com/files/9746485", "./data/cc_variants.sqlite")</code></p>
+<p><code>download.file("https://ndownloader.figshare.com/files/9746458", "./data/mouse_genes.sqlite")</code></p>
+<p><code>download.file("https://ndownloader.figshare.com/files/9746452", "./data/mouse_genes_mgi.sqlite")</code></p>
